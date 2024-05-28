@@ -1,15 +1,13 @@
 import "./App.css";
 import { useState } from "react";
+import { CustomButton } from "./CustomButton";
 
 function App() {
   const [count, setCount] = useState(0);
-  function onClickHandler() {
-    setCount(count + 1);
-  }
 
   return (
     <div>
-      <button onClick={onClickHandler}>Counter {count}</button>
+      <CustomButton count={count} setCount={setCount}></CustomButton>
     </div>
   );
 }
